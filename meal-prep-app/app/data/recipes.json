@@ -1,0 +1,23 @@
+{
+  "chicken": [
+    "https://www.allrecipes.com/recipe/8805/chicken-parmesan/",
+    "https://www.allrecipes.com/recipe/223042/chicken-fajita-marinade/",
+    "https://www.allrecipes.com/recipe/87151/baked-teriyaki-chicken/"
+  ],
+  "beef": [
+    "https://www.allrecipes.com/recipe/16354/easy-meatloaf/",
+    "https://www.allrecipes.com/recipe/25321/bolognese-sauce/"
+  ],
+  "pork": [
+    "https://www.allrecipes.com/recipe/25205/slow-cooker-pulled-pork/",
+    "https://www.allrecipes.com/recipe/223382/pork-chops-with-garlic-butter-sauce/"
+  ],
+  "fish": [
+    "https://www.allrecipes.com/recipe/229960/garlic-butter-salmon/",
+    "https://www.allrecipes.com/recipe/228823/baked-tilapia/"
+  ],
+  "vegetarian": [
+    "https://www.allrecipes.com/recipe/16310/lentil-soup/",
+    "https://www.allrecipes.com/recipe/222006/cauliflower-pizza-crust/"
+  ]
+}
