@@ -53,7 +53,6 @@ async def generate_recipes(request: IngredientsRequest):
                 "total_time": scraper.total_time(),
                 "yields": scraper.yields(),
                 "ingredients": scraper.ingredients(),
-                "instructions": scraper.instructions(),
                 "instructions_list": scraper.instructions_list(),
                 "host": scraper.host(),
                 "url": url
@@ -63,7 +62,7 @@ async def generate_recipes(request: IngredientsRequest):
             # If scraping fails for one recipe, continue with others
             print(f"Failed to scrape {url}: {str(e)}")
             recipes.append({
-                "title": f"Failed to scrape recipe",
+                "title": f"Failed to scrape: {url}",
                 "url": url,
                 "error": str(e)
             })
