@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
-from recipe_scrapers import scrape_me_now
+from recipe_scrapers import scrape_me
 import json
 import random
 from pathlib import Path
@@ -47,7 +47,7 @@ async def generate_recipes(request: IngredientsRequest):
     recipes = []
     for url in selected_urls:
         try:
-            scraper = scrape_me_now(url, wild_mode=True)
+            scraper = scrape_me(url, wild_mode=True)
             recipe_data = {
                 "title": scraper.title(),
                 "total_time": scraper.total_time(),
