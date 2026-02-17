@@ -4,9 +4,14 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import json
 import random
+import logging
 from pathlib import Path
 from typing import Dict
 from scraper import RecipeFetcher
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
@@ -64,7 +69,7 @@ async def generate_meal_plan(selection: ProteinSelection):
                 recipe_data = fetcher.fetch_recipe(url)
                 recipes.append(recipe_data)
             except Exception as e:
-                print(f"Error scraping {url}: {str(e)}")
+                logger.error(f"Error scraping {url}: {str(e)}")
                 # Continue with other recipes even if one fails
                 continue
         
@@ -84,7 +89,7 @@ static_path = Path(__file__).parent / "static"
 if static_path.exists():
     app.mount("/", StaticFiles(directory=str(static_path), html=True), name="static")
 else:
-    print(f"Warning: Static files directory not found at {static_path}")
+    logger.warning(f"Static files directory not found at {static_path}")
     
     @app.get("/")
     async def root():

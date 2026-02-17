@@ -1,5 +1,9 @@
 from recipe_scrapers import scrape_me
 from typing import Dict, List, Optional
+import logging
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 class RecipeFetcher:
     """
@@ -63,7 +67,8 @@ class RecipeFetcher:
             if callable(method_call):
                 return method_call()
             return method_call
-        except Exception:
+        except Exception as e:
+            logger.debug(f"Failed to extract data: {e}")
             return default
     
     def _safe_get_instructions(self, scraper) -> List[str]:
@@ -77,5 +82,6 @@ class RecipeFetcher:
                 return instructions
             else:
                 return [str(instructions)]
-        except Exception:
+        except Exception as e:
+            logger.debug(f"Failed to extract instructions: {e}")
             return []
