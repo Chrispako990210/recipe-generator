@@ -5,7 +5,33 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: meal-prep-selector
     ports:
       - "8000:8000"
-    container_name: meal-prep-selector
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    environment:
+      - LOG_LEVEL=info
+    # Development configuration with hot reload
+    develop:
+      watch:
+        - action: sync
+          path: ./app
+          target: /app
+        - action: rebuild
+          path: ./frontend/src
+          target: /frontend/src
+    # Uncomment for production to bind mount configs
+    # volumes:
+    #   - ./config:/app/config:ro
+    networks:
+      - meal-prep-network
+
+networks:
+  meal-prep-network:
+    driver: bridge
