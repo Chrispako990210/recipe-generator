@@ -1,0 +1,30 @@
+{
+  "chicken": [
+    "https://www.allrecipes.com/recipe/8805/chicken-parmesan/",
+    "https://www.allrecipes.com/recipe/87479/easy-orange-chicken/",
+    "https://www.allrecipes.com/recipe/220717/chicken-tikka-masala/",
+    "https://www.allrecipes.com/recipe/223382/chicken-adobo/",
+    "https://www.allrecipes.com/recipe/12720/roasted-chicken/"
+  ],
+  "beef": [
+    "https://www.allrecipes.com/recipe/11679/homemade-beef-stew/",
+    "https://www.allrecipes.com/recipe/16354/easy-meatloaf/",
+    "https://www.allrecipes.com/recipe/73303/classic-beef-stroganoff/",
+    "https://www.allrecipes.com/recipe/213742/authentic-pad-thai/",
+    "https://www.allrecipes.com/recipe/25321/asian-beef-with-snow-peas/"
+  ],
+  "pasta": [
+    "https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/",
+    "https://www.allrecipes.com/recipe/11758/carbonara/",
+    "https://www.allrecipes.com/recipe/21355/penne-alla-vodka/",
+    "https://www.allrecipes.com/recipe/246866/creamy-tuscan-chicken/",
+    "https://www.allrecipes.com/recipe/11691/spaghetti-bolognese/"
+  ],
+  "vegetarian": [
+    "https://www.allrecipes.com/recipe/222000/vegan-black-bean-burgers/",
+    "https://www.allrecipes.com/recipe/244716/greek-chickpea-salad/",
+    "https://www.allrecipes.com/recipe/16310/vegetarian-chili/",
+    "https://www.allrecipes.com/recipe/85452/authentic-german-spaetzle/",
+    "https://www.allrecipes.com/recipe/21014/garlicky-green-beans/"
+  ]
+}
